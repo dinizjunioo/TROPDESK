@@ -3,11 +3,12 @@ package br.com.checklistti.controller;
 //import jakarta.validation.Valid;
 
 import lombok.RequiredArgsConstructor;
-
-import br.com.checklistti.DTO.ChamadoResumoDTO;
+import br.com.checklistti.dto.ChamadoDetalhadoDTO;
+import br.com.checklistti.dto.ChamadoResumoDTO;
+import br.com.checklistti.model.Chamado;
 import br.com.checklistti.repository.ChamadoRepository;
 //import br.com.checklistti.repository.TecnicoRepository;
-
+import jakarta.validation.Valid;
 
 import org.springframework.lang.NonNull;
 import org.springframework.data.domain.Page;
@@ -71,10 +72,10 @@ public class ChamadoController {
                  .orElse(ResponseEntity.notFound().build());
     }
 
-    // // POST /api/chamados — abrir chamado
+    // POST /api/chamados — abrir chamado
     // @PostMapping
-    // public ResponseEntity<Chamado> criar(@RequestBody @Valid Chamado chamado) {
-    //     Chamado salvo = chamadoRepository.save(chamado);
+    // public ResponseEntity<ChamadoDetalhadoDTO> criar(@RequestBody @Valid ChamadoDetalhadoDTO chamado) {
+    //     ChamadoDetalhadoDTO salvo = chamadoRepository.save(chamado);
     //     return ResponseEntity.status(201).body(salvo);
     // }
 
